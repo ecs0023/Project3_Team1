@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -7,20 +6,35 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class KeyCounter : MonoBehaviour
 {
-
     public int countCollisions = 3;
-
-    void OnCollisionEnter(Collision hit)
+    public GameObject door;
+    public void Start()
     {
-        if (hit.gameObject.name == "Key")
-            countCollisions--;
-        if (countCollisions == 0)
+        door = GameObject.Find("Door1");
+    }
+    public void Update()
+    {
+        if (countCollisions <= 0)
         {
             UnlockDoor();
-        }  
+        }
+    }
+
+    public void OnTriggerEnter2D (Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Key")
+        {
+            countCollisions--;
+            Destroy(collision.gameObject);
+            Debug.Log("KeyCollected");
+        }
+            
+            
     }
     private void UnlockDoor()
     {
+        
         Debug.Log("Unlocked Door");
+        Destroy(door);
     }
 }

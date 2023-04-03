@@ -8,13 +8,11 @@ using UnityEngine.SceneManagement;
 public class SpikeTrap : MonoBehaviour
 {
     public int lives = 2;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (lives <= 0)
@@ -29,7 +27,7 @@ public class SpikeTrap : MonoBehaviour
         if (collision.gameObject.tag == "Hazard")
         {
             lives--;
-
+            Debug.Log("Player Got Hit");
         }
 
 

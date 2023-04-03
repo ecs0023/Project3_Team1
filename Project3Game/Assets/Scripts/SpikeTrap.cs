@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -17,7 +16,7 @@ public class SpikeTrap : MonoBehaviour
     {
         if (lives <= 0)
         {
-            SceneManager.LoadScene("Final");
+            Debug.Log("Lives goes to zero");
         }
     }
 

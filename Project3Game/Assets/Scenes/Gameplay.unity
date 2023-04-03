@@ -915,7 +915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68727b4cfb7fe64c9bbe3da128f9368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countCollisions: 1
+  countCollisions: 3
+  door: {fileID: 0}
 --- !u!1 &1996783843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,22 +1096,22 @@ PrefabInstance:
     - target: {fileID: 2043006049207839217, guid: 7136d3cb3bd6f574ea70f4dc5819d3bc,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7366648
+      value: 0.48552322
       objectReference: {fileID: 0}
     - target: {fileID: 2043006049207839217, guid: 7136d3cb3bd6f574ea70f4dc5819d3bc,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.83582604
+      value: 0.7901639
       objectReference: {fileID: 0}
     - target: {fileID: 2043006049207839217, guid: 7136d3cb3bd6f574ea70f4dc5819d3bc,
         type: 3}
       propertyPath: m_Offset.x
-      value: -5.5316634
+      value: -5.5202484
       objectReference: {fileID: 0}
     - target: {fileID: 2043006049207839217, guid: 7136d3cb3bd6f574ea70f4dc5819d3bc,
         type: 3}
       propertyPath: m_Offset.y
-      value: 1.472085
+      value: 1.494916
       objectReference: {fileID: 0}
     - target: {fileID: 2043006049207839217, guid: 7136d3cb3bd6f574ea70f4dc5819d3bc,
         type: 3}

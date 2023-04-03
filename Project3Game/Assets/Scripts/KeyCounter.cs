@@ -7,22 +7,34 @@ using UnityEngine.SocialPlatforms.Impl;
 public class KeyCounter : MonoBehaviour
 {
     public int countCollisions = 3;
-    public void OnTriggerEnter2D (Collider2D collision)
+    public GameObject door;
+    public void Start()
     {
-        if (collision.gameObject.tag == "Key")
-            countCollisions--;
-            Destroy(collision.gameObject);
-            Debug.Log("KeyCollected");
-            
+        door = GameObject.Find("Door1");
+    }
+    public void Update()
+    {
         if (countCollisions <= 0)
         {
             UnlockDoor();
-        }  
+        }
+    }
+
+    public void OnTriggerEnter2D (Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Key")
+        {
+            countCollisions--;
+            Destroy(collision.gameObject);
+            Debug.Log("KeyCollected");
+        }
+            
+            
     }
     private void UnlockDoor()
     {
-        var Door1 = GameObject.FindWithTag("Door1");
+        
         Debug.Log("Unlocked Door");
-        Destroy(Door1);
+        Destroy(door);
     }
 }

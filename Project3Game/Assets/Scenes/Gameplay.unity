@@ -737,6 +737,7 @@ GameObject:
   - component: {fileID: 1923864983}
   - component: {fileID: 1923864982}
   - component: {fileID: 1923864985}
+  - component: {fileID: 1923864986}
   m_Layer: 0
   m_Name: SpikeTrap
   m_TagString: Hazard
@@ -858,6 +859,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5633531, y: 0.4262074}
   m_EdgeRadius: 0
+--- !u!114 &1923864986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923864981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b093515e0521e4db3564bfc14e45e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 2
 --- !u!1 &1996783843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1092,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6979028505204005645, guid: 0c1eea674a5a6ef4dab213f628d764ef, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c1eea674a5a6ef4dab213f628d764ef, type: 3}
 --- !u!1001 &8354720997136427329
 PrefabInstance:

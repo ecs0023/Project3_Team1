@@ -25,6 +25,7 @@ public class SpikeTrap : MonoBehaviour
         {
             lives--;
             Debug.Log("Player Got Hit");
+            
         }
 
         if (lives <= 0)

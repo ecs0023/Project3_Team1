@@ -38,6 +38,6 @@ public class SpikeTrap : MonoBehaviour
     }
     public void ShowPanel()
     {
-        SceneManager.LoadScene("EndGame");
+        Debug.Log("You Died");
     }
 }

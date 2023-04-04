@@ -1,4 +1,5 @@
 
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     private Vector2 moveDirection;
 
+
     public void Update()
     {
         ProcessInputs();
@@ -19,7 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         Move();
     }
-    
+
     public void ProcessInputs()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
     }
     public void Move()
     {
-        rb.velocity = new Vector2(moveDirection.x*moveSpeed, moveDirection.y*moveSpeed);
-        
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+
     }
 }

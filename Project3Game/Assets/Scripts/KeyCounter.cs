@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class KeyCounter : MonoBehaviour
 {
-    public int countCollisions = 9;
+    public int countCollisions = 3;
     public GameObject door1;
     public GameObject door2;
     public GameObject door3;
@@ -20,8 +20,6 @@ public class KeyCounter : MonoBehaviour
     public void Start()
     {
         door1 = GameObject.Find("Door1");
-        door2 = GameObject.Find("Door2");
-        door3 = GameObject.Find("Door3");
         textbox= GameObject.Find("Text1");
         textbox.gameObject.SetActive(false);
     }
@@ -39,17 +37,9 @@ public class KeyCounter : MonoBehaviour
 
         }
 
-        if (countCollisions == 6)
+        if (countCollisions <= 0)
         {
             UnlockDoor();
-        }
-        if (countCollisions == 3)
-        {
-            UnlockDoor2();
-        }
-        if (countCollisions == 0)
-        {
-            UnlockDoor3();
         }
 
 
@@ -65,16 +55,6 @@ public class KeyCounter : MonoBehaviour
     private void UnlockDoor()
     {
         Destroy(door1);
-    }
-
-    private void UnlockDoor2()
-    {
-        Destroy(door2);
-    }
-
-    private void UnlockDoor3()
-    {
-        Destroy(door3);
     }
     
 }

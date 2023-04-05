@@ -1,8 +1,10 @@
+using Mono.Cecil.Cil;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class SpikeTrap : MonoBehaviour
 {
@@ -14,21 +16,28 @@ public class SpikeTrap : MonoBehaviour
 
     void Update()
     {
-        if (lives <= 0)
-        {
-            Debug.Log("Lives goes to zero");
-        }
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        if (collision.gameObject.tag == "Hazard")
+        if (collision.gameObject.tag == "Player")
         {
             lives--;
             Debug.Log("Player Got Hit");
+            
+        }
+
+        if (lives <= 0)
+        {
+            Debug.Log("Lives goes to zero");
+            ShowPanel();
         }
 
 
+    }
+    public void ShowPanel()
+    {
+        Debug.Log("You Died");
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Undefined
   - Door1
   - Hazard
+  - NextLevel
   layers:
   - Default
   - TransparentFX

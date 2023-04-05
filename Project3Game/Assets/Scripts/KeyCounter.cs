@@ -14,10 +14,7 @@ public class KeyCounter : MonoBehaviour
     }
     public void Update()
     {
-        if (countCollisions <= 0)
-        {
-            UnlockDoor();
-        }
+
     }
 
     public void OnTriggerEnter2D (Collider2D collision)
@@ -28,8 +25,12 @@ public class KeyCounter : MonoBehaviour
             Destroy(collision.gameObject);
             Debug.Log("KeyCollected");
         }
-            
-            
+        if (countCollisions <= 0)
+        {
+            UnlockDoor();
+        }
+
+
     }
     private void UnlockDoor()
     {

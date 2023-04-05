@@ -9,6 +9,7 @@ TagManager:
   - Door1
   - Hazard
   - NextLevel
+  - Door3
   layers:
   - Default
   - TransparentFX

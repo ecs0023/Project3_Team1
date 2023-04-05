@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class KeyCounter : MonoBehaviour
 {
@@ -10,25 +12,33 @@ public class KeyCounter : MonoBehaviour
     public GameObject door1;
     public GameObject door2;
     public GameObject door3;
+    public GameObject textbox;
+    public GameObject textbox1;
+    public GameObject textbox2;
+    public GameObject textbox3;
+
     public void Start()
     {
         door1 = GameObject.Find("Door1");
-        door2= GameObject.Find("Door2");
+        door2 = GameObject.Find("Door2");
         door3 = GameObject.Find("Door3");
+        textbox= GameObject.Find("Text1");
+        textbox.gameObject.SetActive(false);
     }
     public void Update()
     {
 
     }
 
-    public void OnTriggerEnter2D (Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Key")
         {
+            textbox.gameObject.SetActive(true);
             countCollisions--;
-            Destroy(collision.gameObject);
-            Debug.Log("KeyCollected");
+
         }
+
         if (countCollisions == 6)
         {
             UnlockDoor();
@@ -44,24 +54,27 @@ public class KeyCounter : MonoBehaviour
 
 
     }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Key")
+        {
+            textbox.gameObject.SetActive(false);
+            Destroy(collision.gameObject);
+        }
+    }
     private void UnlockDoor()
     {
-        
-        Debug.Log("Unlocked Door");
         Destroy(door1);
     }
 
     private void UnlockDoor2()
     {
-
-        Debug.Log("Unlocked Door");
         Destroy(door2);
     }
 
     private void UnlockDoor3()
     {
-
-        Debug.Log("Unlocked Door");
         Destroy(door3);
     }
+    
 }

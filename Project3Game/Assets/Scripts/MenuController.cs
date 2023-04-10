@@ -18,6 +18,10 @@ public class MenuController : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("level1");
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Level3");
     }
 }

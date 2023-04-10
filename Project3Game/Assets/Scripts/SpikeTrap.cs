@@ -31,13 +31,13 @@ public class SpikeTrap : MonoBehaviour
         if (lives <= 0)
         {
             Debug.Log("Lives goes to zero");
-            ShowPanel();
+            EndGame();
         }
 
 
     }
-    public void ShowPanel()
+    public void EndGame()
     {
-        Debug.Log("You Died");
+        SceneManager.LoadScene("GameOver");
     }
 }

@@ -24,4 +24,8 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Level3");
     }
+    public void RestartLevel2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
 }

@@ -154,12 +154,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 254861117}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 443.22, y: -391.34}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -710.2, y: -276}
+  m_SizeDelta: {x: 287.70923, y: 170.8964}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228534231
 MonoBehaviour:
@@ -181,7 +181,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Win!
+  m_text: You have found your sister within your memories, but nothing will ever
+    be able to bring her back after the terrible accident. "There has been a lot
+    of grief and sadness since you have been gone, more than you could ever imagine.
+    But I think that I am now finally able to accept that this sadness is proof of
+    the love I have for you. These feelings will always stay with me, but I can now
+    live knowing that these emotions represent the time we shared together."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -244,7 +249,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -120.89635, z: -497.80783, w: -343.72498}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -364,6 +369,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 346554190}
+  - {fileID: 501693143}
   - {fileID: 228534230}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -402,8 +408,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 501693143}
+  m_Children: []
   m_Father: {fileID: 254861117}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -544,18 +549,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501693142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9988, y: 1.9988, z: 1.9988}
+  m_LocalScale: {x: 1.9987999, y: 1.9987999, z: 1.9987999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1685268210}
-  m_Father: {fileID: 346554190}
-  m_RootOrder: 0
+  m_Father: {fileID: 254861117}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 442.59, y: -491}
+  m_AnchoredPosition: {x: 442.59, y: -703.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501693144
